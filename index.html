@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Jouw Naam</title>
+  <meta name="description" content="Portfolio van Jouw Naam: projecten, foto's en meer, vastgeprikt op één prikbord.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600;700&display=swap">
+  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("anim");setTimeout(function(){if(!window.boardReady)document.documentElement.classList.remove("anim")},3000)}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inhoud">Naar de inhoud</a>
+
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo taped" href="index.html">Jouw Naam</a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="index.html" aria-current="page" style="--r:-2deg"><span>Home</span></a></li>
+          <li><a href="projects.html" class="pin-blue" style="--r:1.5deg"><span>Projecten</span></a></li>
+          <li><a href="about.html" class="pin-green" style="--r:-1deg"><span>Over mij</span></a></li>
+          <li><a href="contact.html" class="pin-yellow" style="--r:2deg"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="inhoud">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="note pinned" style="--r:-1deg">
+          <h1 id="hero-title">Hoi! Ik ben <span class="scribble">Jouw Naam<svg viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M34 70 C 8 52, 30 18, 120 12 C 210 6, 292 22, 288 52 C 284 84, 190 94, 110 90 C 40 86, 6 70, 22 44 C 32 28, 70 20, 96 18"/></svg></span>.</h1>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus, posuere velit aliquet.</p>
+          <div class="actions">
+            <a class="btn" href="projects.html">Bekijk mijn projecten</a>
+            <a class="btn btn--ghost" href="contact.html">Neem contact op</a>
+          </div>
+        </div>
+
+        <figure class="polaroid taped" style="--r:3deg">
+          <!-- Vervang door je eigen foto: src="img/jij.jpg" -->
+          <img src="img/placeholder.svg" alt="Portretfoto van Jouw Naam" width="800" height="600">
+          <figcaption>dit ben ik!</figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="featured-title">
+        <div class="section-head">
+          <h2 id="featured-title" class="label taped">Uitgelichte projecten</h2>
+          <a class="btn btn--paper" href="projects.html">Alle projecten</a>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="polaroid project pinned lift" data-yarn="1" style="--r:-2deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Alfa" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=alfa">Project Alfa</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+              <ul class="tags" aria-label="Tags"><li>Design</li><li>Web</li></ul>
+            </div>
+          </article>
+
+          <article class="polaroid project pinned pin-blue lift" data-yarn="2" style="--r:1.5deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Beta" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=beta">Project Beta</a></h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              <ul class="tags" aria-label="Tags"><li>Fotografie</li></ul>
+            </div>
+          </article>
+
+          <article class="polaroid project pinned pin-green lift" data-yarn="3" style="--r:-1deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Gamma" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=gamma">Project Gamma</a></h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+              <ul class="tags" aria-label="Tags"><li>Branding</li><li>Print</li></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid grid--2" aria-label="Nu bezig en citaat">
+        <div class="sticky now pinned pin-yellow" data-yarn="1" data-yarn-group="b" style="--r:-3deg">
+          <h3>Nu bezig met...</h3>
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Sed do eiusmod tempor</li>
+          </ul>
+        </div>
+
+        <div class="note note--pink quote pinned pin-black" data-yarn="2" data-yarn-group="b" style="--r:1.5deg">
+          <blockquote>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</blockquote>
+          <cite>Iemand Belangrijk</cite>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="note taped" style="--r:-1deg">&copy; <span data-year>2026</span> Jouw Naam. Gemaakt met lijm en punaises.</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/board.js"></script>
+</body>
+</html>

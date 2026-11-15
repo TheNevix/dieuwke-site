@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <pattern id="stripes" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#e6e1d8"/>
+      <rect width="14" height="28" fill="#dfd9ce"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#stripes)"/>
+  <g transform="translate(400 270)" fill="none" stroke="#8c8476" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="-80" y="-48" width="160" height="112" rx="16"/>
+    <path d="M-36 -48 l12 -22 h48 l12 22"/>
+    <circle cx="0" cy="8" r="32"/>
+  </g>
+  <text x="400" y="395" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4" fill="#7a7266">JOUW FOTO</text>
+</svg>

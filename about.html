@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Over mij | Jouw Naam</title>
+  <meta name="description" content="Wie is Jouw Naam? Achtergrond, vaardigheden en een korte tijdlijn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600;700&display=swap">
+  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("anim");setTimeout(function(){if(!window.boardReady)document.documentElement.classList.remove("anim")},3000)}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inhoud">Naar de inhoud</a>
+
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo taped" href="index.html">Jouw Naam</a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="index.html" style="--r:-2deg"><span>Home</span></a></li>
+          <li><a href="projects.html" class="pin-blue" style="--r:1.5deg"><span>Projecten</span></a></li>
+          <li><a href="about.html" aria-current="page" class="pin-green" style="--r:-1deg"><span>Over mij</span></a></li>
+          <li><a href="contact.html" class="pin-yellow" style="--r:2deg"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="inhoud">
+      <section class="about" aria-labelledby="page-title">
+        <figure class="polaroid polaroid--portrait taped" style="--r:-3deg">
+          <!-- Vervang door je eigen foto: src="img/portret.jpg" -->
+          <img src="img/placeholder.svg" alt="Portretfoto van Jouw Naam" width="800" height="600">
+          <figcaption>zomer 2026</figcaption>
+        </figure>
+
+        <div class="note note--lined pinned pin-blue" style="--r:1deg">
+          <h1 id="page-title">Over mij</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
+          <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+          <p class="hand">Lorem ipsum, groetjes!</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="skills-title">
+        <h2 id="skills-title" class="label taped">Waar ik goed in ben</h2>
+        <ul class="grid skills" role="list" style="list-style:none;margin:0;padding:0">
+          <li class="sticky" style="--r:-2deg">
+            <h3>Ontwerp</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+          </li>
+          <li class="sticky" style="--r:1.5deg;background-color:var(--note-pink)">
+            <h3>Code</h3>
+            <p>Sed do eiusmod tempor incididunt ut labore.</p>
+          </li>
+          <li class="sticky" style="--r:-1deg;background-color:var(--note-blue)">
+            <h3>Fotografie</h3>
+            <p>Ut enim ad minim veniam, quis nostrud.</p>
+          </li>
+          <li class="sticky coffee" style="--r:2.5deg;background-color:var(--note-green)">
+            <h3>Koffie</h3>
+            <p>Duis aute irure dolor in reprehenderit.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="timeline-title">
+        <h2 id="timeline-title" class="label taped">Tijdlijn</h2>
+        <ol class="grid grid--3" style="list-style:none;margin:0;padding:0">
+          <li class="index-card pinned" data-yarn="1" style="--r:-1.5deg">
+            <span class="year">2020</span>
+            <h3>Lorem ipsum</h3>
+            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </li>
+          <li class="index-card pinned pin-blue" data-yarn="2" style="--r:1deg">
+            <span class="year">2023</span>
+            <h3>Dolor sit amet</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          </li>
+          <li class="index-card pinned pin-green" data-yarn="3" style="--r:-0.5deg">
+            <span class="year">Nu</span>
+            <h3>Magna aliqua</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="grid grid--3" aria-label="Meer foto's">
+        <figure class="polaroid pinned" style="--r:2deg">
+          <img src="img/placeholder.svg" alt="Foto: lorem ipsum" width="800" height="600">
+          <figcaption>op reis</figcaption>
+        </figure>
+        <figure class="polaroid taped" style="--r:-2.5deg">
+          <img src="img/placeholder.svg" alt="Foto: lorem ipsum" width="800" height="600">
+          <figcaption>mijn werkplek</figcaption>
+        </figure>
+        <figure class="polaroid pinned pin-yellow" style="--r:1deg">
+          <img src="img/placeholder.svg" alt="Foto: lorem ipsum" width="800" height="600">
+          <figcaption>hobby</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="note taped" style="--r:-1deg">&copy; <span data-year>2026</span> Jouw Naam. Gemaakt met lijm en punaises.</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/board.js"></script>
+</body>
+</html>

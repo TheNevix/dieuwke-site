@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projecten | Jouw Naam</title>
+  <meta name="description" content="Een overzicht van de projecten van Jouw Naam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600;700&display=swap">
+  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("anim");setTimeout(function(){if(!window.boardReady)document.documentElement.classList.remove("anim")},3000)}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inhoud">Naar de inhoud</a>
+
+  <div class="wrap">
+    <header class="site-header">
+      <a class="logo taped" href="index.html">Jouw Naam</a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="index.html" style="--r:-2deg"><span>Home</span></a></li>
+          <li><a href="projects.html" aria-current="page" class="pin-blue" style="--r:1.5deg"><span>Projecten</span></a></li>
+          <li><a href="about.html" class="pin-green" style="--r:-1deg"><span>Over mij</span></a></li>
+          <li><a href="contact.html" class="pin-yellow" style="--r:2deg"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="inhoud">
+      <section class="intro-row" aria-labelledby="page-title">
+        <div class="note pinned" style="--r:-1deg">
+          <h1 id="page-title">Projecten</h1>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor metus justo.</p>
+        </div>
+        <div class="sticky" style="--r:3deg">
+          <h3>Tip!</h3>
+          <p>Klik op een project om meer te lezen. Lorem ipsum dolor sit amet.</p>
+        </div>
+      </section>
+
+      <section aria-label="Alle projecten">
+        <div class="grid grid--3">
+          <article class="polaroid project pinned lift" style="--r:-2deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Alfa" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=alfa">Project Alfa</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              <ul class="tags" aria-label="Tags"><li>Design</li><li>Web</li></ul>
+              <span class="more" aria-hidden="true">Lees meer &rarr;</span>
+            </div>
+          </article>
+
+          <article class="polaroid project pinned pin-blue lift" style="--r:1.5deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Beta" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=beta">Project Beta</a></h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+              <ul class="tags" aria-label="Tags"><li>Fotografie</li></ul>
+              <span class="more" aria-hidden="true">Lees meer &rarr;</span>
+            </div>
+          </article>
+
+          <article class="polaroid project pinned pin-green lift" style="--r:-1deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Gamma" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=gamma">Project Gamma</a></h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+              <ul class="tags" aria-label="Tags"><li>Branding</li><li>Print</li></ul>
+              <span class="more" aria-hidden="true">Lees meer &rarr;</span>
+            </div>
+          </article>
+
+          <article class="polaroid project pinned pin-yellow lift" style="--r:2deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Delta" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=delta">Project Delta</a></h3>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              <ul class="tags" aria-label="Tags"><li>App</li><li>UX</li></ul>
+              <span class="more" aria-hidden="true">Lees meer &rarr;</span>
+            </div>
+          </article>
+
+          <article class="polaroid project pinned pin-black lift" style="--r:-1.5deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Epsilon" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=epsilon">Project Epsilon</a></h3>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+              <ul class="tags" aria-label="Tags"><li>Illustratie</li></ul>
+              <span class="more" aria-hidden="true">Lees meer &rarr;</span>
+            </div>
+          </article>
+
+          <article class="polaroid project pinned lift" style="--r:1deg">
+            <img src="img/placeholder.svg" alt="Afbeelding van Project Zeta" width="800" height="600">
+            <div class="project__body">
+              <h3><a href="project.html?p=zeta">Project Zeta</a></h3>
+              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+              <ul class="tags" aria-label="Tags"><li>Video</li><li>Motion</li></ul>
+              <span class="more" aria-hidden="true">Lees meer &rarr;</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="note taped" style="--r:-1deg">&copy; <span data-year>2026</span> Jouw Naam. Gemaakt met lijm en punaises.</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/board.js"></script>
+</body>
+</html>
