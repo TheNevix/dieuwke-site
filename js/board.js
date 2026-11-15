@@ -5,6 +5,9 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
   const animate = root.classList.contains("anim");
+  const cssVar = (name, fallback) => getComputedStyle(root).getPropertyValue(name).trim() || fallback;
+  const ACCENT = cssVar("--accent", "#b7473a");
+  const BRAND_BLUE = cssVar("--brand-blue", "#536c78");
 
   const ITEMS = ".note, .sticky, .polaroid, .index-card, .biz-card, .label, .logo, .nav a";
   const items = [...document.querySelectorAll(`.wrap :is(${ITEMS})`)];
@@ -91,7 +94,7 @@
       el.append(anchor);
       el._anchor = anchor;
 
-      const color = getComputedStyle(el).getPropertyValue("--pin").trim() || "#d23a2f";
+      const color = getComputedStyle(el).getPropertyValue("--pin").trim() || ACCENT;
       const grad = document.createElementNS(SVG, "radialGradient");
       grad.id = `pinhead-${i}`;
       grad.setAttribute("cx", "35%");
@@ -404,7 +407,7 @@
     resetBtn = document.createElement("button");
     resetBtn.type = "button";
     resetBtn.className = "btn btn--paper btn--small";
-    resetBtn.textContent = "Bord opruimen";
+    resetBtn.textContent = "Let's tidy up!";
     resetBtn.addEventListener("click", resetBoard);
     tools.append(resetBtn);
 
@@ -414,10 +417,11 @@
       const hint = document.createElement("aside");
       hint.className = "hint";
       hint.setAttribute("aria-label", "Tip");
+      hint.setAttribute("lang", "en");
       hint.innerHTML = `
         <h3>Psst!</h3>
-        <p>Dit bord is echt. Sleep alles rond, of dubbelklik op het kurk.</p>
-        <button class="hint__close" type="button" aria-label="Tip sluiten">&times;</button>`;
+        <p>This pinboard is interactive! Move things around or double-click the corkboard to add your own touch!</p>
+        <button class="hint__close" type="button" aria-label="Close tip">&times;</button>`;
       hint.querySelector("button").addEventListener("click", () => {
         try { localStorage.setItem("board:hint", "weg"); } catch { /* negeren */ }
         if (reduce) return hint.remove();
@@ -448,7 +452,7 @@
     const ox = box.left + box.width / 2;
     const oy = box.top;
     const colors = ["#fff1a1", "#ffd3dc", "#cfe6ff", "#d7f2c8", "#fffdf6", "#ffffff"];
-    const pins = ["#d23a2f", "#2f6fd2", "#2e9b57", "#e8b21c"];
+    const pins = [ACCENT, BRAND_BLUE, "#2e9b57", "#e8b21c"];
 
     const layer = document.createElement("div");
     layer.className = "confetti";

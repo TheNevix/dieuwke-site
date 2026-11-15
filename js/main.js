@@ -3,8 +3,16 @@ document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
-// Contactformulier: demo zonder backend. Koppel later aan bv. Formspree of Netlify Forms.
+// Contactformulier: er is geen server, dus het formulier opent de mailapp van de bezoeker
+// met een kant-en-klaar bericht naar data-mail-to. Later kan dit naar bv. Formspree.
 const form = document.querySelector("[data-contact-form]");
+
+const openMail = (form) => {
+  const { name, email, subject, message } = form.elements;
+  const body = `${message.value.trim()}\n\n${name.value.trim()}\n${email.value.trim()}`;
+  const href = `mailto:${form.dataset.mailTo}?subject=${encodeURIComponent(`${subject.value} (from ${name.value.trim()})`)}&body=${encodeURIComponent(body)}`;
+  window.location.href = href;
+};
 
 if (form) {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -21,6 +29,7 @@ if (form) {
     event.preventDefault();
     const name = form.elements.name.value.trim();
     thanks.querySelector("[data-thanks-name]").textContent = name;
+    openMail(form);
 
     if (!reduce) {
       window.paperConfetti?.(form.querySelector("[type=submit]"));
@@ -46,7 +55,7 @@ if (form) {
       swap(true);
     }
 
-    status.textContent = `Bedankt ${name}! Dit is een demo, je bericht is nog niet echt verzonden.`;
+    status.textContent = `Thank you ${name}! Your email app should now open with your message. Press send there to deliver it.`;
     form.reset();
     thanks.focus();
   });

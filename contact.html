@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Jouw Naam</title>
-  <meta name="description" content="Neem contact op met Jouw Naam.">
+  <title>Say hello | Dieuwke Van Leuven</title>
+  <meta name="description" content="Got something in mind? Say hello to Dieuwke Van Leuven for branding, illustration, personalised prints or a creative project.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500;700&family=Fredoka:wght@600;700&display=swap">
   <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("anim");setTimeout(function(){if(!window.boardReady)document.documentElement.classList.remove("anim")},3000)}</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#inhoud">Naar de inhoud</a>
+  <a class="skip-link" href="#inhoud">Skip to content</a>
 
   <div class="wrap">
     <header class="site-header">
-      <a class="logo taped" href="index.html">Jouw Naam</a>
-      <nav class="nav" aria-label="Hoofdmenu">
+      <a class="logo taped" href="index.html">Dieuwke Van Leuven</a>
+      <nav class="nav" aria-label="Main menu">
         <ul>
           <li><a href="index.html" style="--r:-2deg"><span>Home</span></a></li>
-          <li><a href="projects.html" class="pin-blue" style="--r:1.5deg"><span>Projecten</span></a></li>
-          <li><a href="about.html" class="pin-green" style="--r:-1deg"><span>Over mij</span></a></li>
-          <li><a href="contact.html" aria-current="page" class="pin-yellow" style="--r:2deg"><span>Contact</span></a></li>
+          <li><a href="projects.html" class="pin-blue" style="--r:1.5deg"><span lang="en">My work</span></a></li>
+          <li><a href="about.html" class="pin-green" style="--r:-1deg"><span lang="en">Meet me</span></a></li>
+          <li><a href="contact.html" aria-current="page" class="pin-yellow" style="--r:2deg"><span>Say hello</span></a></li>
         </ul>
       </nav>
     </header>
@@ -30,72 +30,79 @@
     <main id="inhoud">
       <section class="contact" aria-labelledby="page-title">
         <div class="note pinned" style="--r:-0.5deg">
-          <h1 id="page-title">Contact</h1>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Stuur me een bericht en ik antwoord zo snel mogelijk.</p>
+          <h1 id="page-title">Got something in mind? Let's chat!</h1>
+          <div class="lead">
+            <p>A creative idea, a story waiting to be told or just a little hello? Whatever it is, I'd love to hear from you!</p>
+            <p>Fill in the form below and let's see what we can create together. Who knows where a little message might lead?</p>
+            <p><strong>No idea is too small or too crazy! ;)</strong></p>
+          </div>
 
-          <form data-contact-form action="#" method="post">
+          <form data-contact-form data-mail-to="dieuwkevanleuven@hotmail.com" action="#" method="post">
             <div class="field">
-              <label for="name">Naam</label>
+              <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required>
             </div>
             <div class="field">
-              <label for="email">E-mailadres</label>
+              <label for="email">Email address</label>
               <input id="email" name="email" type="email" autocomplete="email" required>
             </div>
             <div class="field">
-              <label for="subject">Onderwerp <span class="hint">(optioneel)</span></label>
+              <label for="subject">Subject</label>
               <select id="subject" name="subject">
-                <option>Een project</option>
-                <option>Samenwerking</option>
-                <option>Gewoon hallo zeggen</option>
+                <option>Branding &amp; visual identity</option>
+                <option>Illustrations &amp; storytelling</option>
+                <option>Personalised prints &amp; cards</option>
+                <option>A creative project</option>
+                <option>Something else entirely!</option>
+                <option>Just saying hi!</option>
               </select>
             </div>
             <div class="field">
-              <label for="message">Bericht</label>
+              <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
-            <button class="btn" type="submit">Verstuur bericht</button>
+            <button class="btn" type="submit">Send a little hello!</button>
           </form>
 
           <div class="thanks" data-thanks tabindex="-1" hidden>
-            <h2>Bedankt, <span data-thanks-name></span>!</h2>
-            <p class="hand">Je briefje is onderweg. Lorem ipsum, ik laat snel iets weten.</p>
-            <button class="btn btn--ghost" type="button">Nog een bericht sturen</button>
+            <h2>Thank you, <span data-thanks-name></span>!</h2>
+            <p class="hand">Your email app should now open with your message ready to go. Just hit send!</p>
+            <button class="btn btn--ghost" type="button">Write another message</button>
           </div>
 
           <p class="form-status visually-hidden" role="status" aria-live="polite"></p>
         </div>
 
-        <aside aria-label="Contactgegevens">
+        <aside aria-label="Contact details">
           <div class="biz-card pinned pin-black" style="--r:2deg">
-            <h2>Jouw Naam</h2>
-            <p class="hand" style="margin:0">Lorem ipsum &amp; dolor</p>
+            <h2>Dieuwke Van Leuven</h2>
+            <p class="hand" style="margin:0">“Impossible? That's not in my vocabulary.”</p>
             <dl>
-              <dt>E-mail</dt>
-              <dd><a href="mailto:hallo@jouwnaam.be">hallo@jouwnaam.be</a></dd>
-              <dt>Telefoon</dt>
-              <dd><a href="tel:+32400000000">+32 400 00 00 00</a></dd>
-              <dt>Locatie</dt>
-              <dd>Gent, België</dd>
+              <dt>Drop me an email!</dt>
+              <dd><a href="mailto:dieuwkevanleuven@hotmail.com">dieuwkevanleuven@hotmail.com</a></dd>
+              <dt>Give me a call!</dt>
+              <dd><a href="tel:+32478704103">+32 478 70 41 03</a></dd>
+              <dt>Where to find me!</dt>
+              <dd>Wetteren</dd>
             </dl>
           </div>
 
           <div class="sticky" style="--r:-3deg">
-            <h3>Snel antwoord</h3>
-            <p>Meestal binnen 2 werkdagen. Lorem ipsum dolor sit amet.</p>
+            <h3>Quick reply!</h3>
+            <p>I'll get back to you within 2 business days!</p>
+            <p style="margin-top:0.5rem">In the meantime, keep those creative ideas flowing! ;)</p>
           </div>
 
-          <figure class="polaroid taped" style="--r:1.5deg">
-            <!-- Vervang door een kaartje of foto van je werkplek -->
-            <img src="img/placeholder.svg" alt="Foto van de omgeving" width="800" height="600">
-            <figcaption>kom eens langs</figcaption>
+          <figure class="polaroid polaroid--portrait polaroid--note taped" style="--r:1.5deg">
+            <img src="img/say-hello.jpg" alt="Dieuwke laughing in her wheelchair with a handbike attached, on a lawn full of autumn leaves" width="900" height="1200" loading="lazy" style="object-position:50% 55%">
+            <figcaption>“Rolling through life with a smile and a splash of adventure! ;)”</figcaption>
           </figure>
         </aside>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p class="note taped" style="--r:-1deg">&copy; <span data-year>2026</span> Jouw Naam. Gemaakt met lijm en punaises.</p>
+      <p class="note taped" style="--r:-1deg" lang="en">&copy; <span data-year>2026</span> Dieuwke Van Leuven. Made with glue &amp; pushpins</p>
     </footer>
   </div>
 
