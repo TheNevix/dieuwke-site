@@ -605,6 +605,13 @@ h2 {
   line-height: 1.2;
 }
 
+.quote .cite-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-weight: 700;
+  color: var(--brand-blue-dark);
+}
+
 .quote cite {
   display: block;
   margin-top: 0.75rem;
@@ -800,6 +807,24 @@ h2 {
   max-width: 340px;
 }
 
+/* Video in een polaroid: laadt pas bij het afspelen, toont tot dan een stilstaand beeld */
+.polaroid video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.polaroid--video-portrait {
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
+}
+
+.draggable video {
+  cursor: auto;
+}
+
 /* Kleurstalen op een kaartje */
 .palette {
   width: 100%;
@@ -915,7 +940,7 @@ h2 {
 .cta {
   max-width: 680px;
   margin-inline: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .cta p {

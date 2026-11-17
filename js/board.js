@@ -255,7 +255,7 @@
 
   function startDrag(e, el) {
     if (e.button !== 0 || e.pointerType === "touch") return;
-    if (e.target.closest("input, textarea, select, button, label")) return;
+    if (e.target.closest("input, textarea, select, button, label, video")) return;
 
     const start = { px: e.clientX, py: e.clientY, ...getOffset(el) };
     let moved = false;
