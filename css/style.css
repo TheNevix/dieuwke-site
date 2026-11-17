@@ -1191,6 +1191,11 @@ h2 {
   visibility: hidden;
 }
 
+/* Items staan onder elkaar: dit stuk touw (en zijn losse punaisekop) niet tonen */
+.yarn .is-off {
+  display: none;
+}
+
 .yarn .strand {
   fill: none;
   stroke: var(--accent);

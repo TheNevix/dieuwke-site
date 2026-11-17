@@ -114,6 +114,13 @@
     yarn = { svg, segments, heads, ready: false, shown: new Set() };
   }
 
+  // Plek in de layout (zonder slepen/draaien): offsetTop negeert translate en rotate
+  function layoutBox(el) {
+    let top = 0;
+    for (let node = el; node; node = node.offsetParent) top += node.offsetTop;
+    return { top, bottom: top + el.offsetHeight };
+  }
+
   function drawYarn() {
     if (!yarn) return;
     yarn.svg.style.height = "0px";
@@ -124,7 +131,18 @@
       return { x: r.left + scrollX, y: r.top + scrollY };
     });
 
+    // Alleen touw tussen items die naast elkaar staan; onder elkaar (bv. op mobiel) geen touw.
+    // Gemeten op de plek in de layout, dus slepen laat het touw niet aan- en uitspringen.
+    const boxes = yarnItems.map(layoutBox);
+    const tied = new Set();
+
     yarn.segments.forEach(({ strand, twist, from, to }) => {
+      const sideBySide = boxes[from].top < boxes[to].bottom && boxes[to].top < boxes[from].bottom;
+      strand.classList.toggle("is-off", !sideBySide);
+      twist.classList.toggle("is-off", !sideBySide);
+      if (!sideBySide) return;
+      tied.add(from).add(to);
+
       const a = pts[from];
       const b = pts[to];
       const sag = Math.min(110, Math.hypot(b.x - a.x, b.y - a.y) * 0.16);
@@ -134,6 +152,7 @@
     });
 
     yarn.heads.forEach((head, i) => {
+      head.classList.toggle("is-off", !tied.has(i));
       head.setAttribute("cx", pts[i].x);
       head.setAttribute("cy", pts[i].y);
     });
