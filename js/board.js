@@ -439,7 +439,7 @@
       hint.setAttribute("lang", "en");
       hint.innerHTML = `
         <h3>Psst!</h3>
-        <p>This pinboard is interactive! Move things around or double-click the corkboard to add your own touch!</p>
+        <p>This pinboard is interactive! Move things around to add your own touch!</p>
         <button class="hint__close" type="button" aria-label="Close tip">&times;</button>`;
       hint.querySelector("button").addEventListener("click", () => {
         try { localStorage.setItem("board:hint", "weg"); } catch { /* negeren */ }
